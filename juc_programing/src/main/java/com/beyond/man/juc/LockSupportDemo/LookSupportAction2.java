@@ -3,14 +3,10 @@ package com.beyond.man.juc.LockSupportDemo;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * public static void park(Object blocker); // 暂停当前线程
- * public static void parkNanos(Object blocker, long nanos); // 暂停当前线程，不过有超时时间的限制
- * public static void parkUntil(Object blocker, long deadline); // 暂停当前线程，直到某个时间
- * public static void park(); // 无期限暂停当前线程
- * public static void parkNanos(long nanos); // 暂停当前线程，不过有超时时间的限制
- * public static void parkUntil(long deadline); // 暂停当前线程，直到某个时间
- * public static void unpark(Thread thread); // 恢复当前线程
- * public static Object getBlocker(Thread t);
+ *  LockSupport 是个工具类，它的主要作用是挂起和唤醒线程，
+ * 该工具类是创建锁和其他同步类的基础。
+ * LockSupport 类与每 个 使用它的线程都会关联一 个许可证，在 默认情况下调用
+ * LockSupport 类的方法的线程是不持有许可证的。 LockSupport 是使用 Unsafe 类实现的，
  */
 public class LookSupportAction2 {
     public static Object u = new Object();
@@ -46,7 +42,7 @@ public class LookSupportAction2 {
     public static void main(String[] args) {
         t1.start();
         /**
-         * 使得给定线程t1许可可用，如果线程t1在park上阻塞，则接触阻塞状态
+         * 使得给定线程t1许可可用，如果线程t1在park上阻塞，则结束阻塞状态
          * 否则，保证当线程t1执行unpark后，当再次执行park时候，许可可用，不会阻塞立即返回
          */
         LockSupport.unpark(t1);
