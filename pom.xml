@@ -12,6 +12,8 @@
         <module>juc_programing</module>
         <module>spring_action</module>
         <module>spring_action</module>
+        <module>spring_action_ioc2</module>
+        <module>spring_action_ioc_xml</module>
     </modules>
 
 
