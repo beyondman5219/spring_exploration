@@ -14,6 +14,7 @@ import org.springframework.context.annotation.ImportResource;
  * 使用配置类的方式自动发现和装配Bean
  */
 @Configuration
+@ImportResource("classpath:SpringBean2.xml")
 public class CDPlayConfig {
 
 }

@@ -16,10 +16,12 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+
 import java.lang.reflect.Constructor;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CDPlayConfig.class)
+
 public class test {
     /**
      * @Resource 默认按名称查找。如果没有对应名称的bean则按类型查找，
@@ -51,6 +53,7 @@ public class test {
         System.out.println("MusicPlay = " + musicPlay);
     }
 
+
     @Test
     public void TestSpringContext() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringBean2.xml");
@@ -68,4 +71,5 @@ public class test {
         SgtPapers sgtPapers = BeanUtils.instantiateClass(constructor);
         System.out.println("sptPapers = " + sgtPapers);
     }
+
 }

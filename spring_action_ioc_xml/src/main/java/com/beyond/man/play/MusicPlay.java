@@ -8,7 +8,9 @@ public class MusicPlay {
     public MusicPlay(CompactDisc compactDisc) {
         this.compactDisc = compactDisc;
     }
+
     public MusicPlay(){
 
     }
+
 }
