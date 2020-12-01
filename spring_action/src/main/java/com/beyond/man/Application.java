@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import(SpringBeanConfig.class)
 public class Application {
+    /**
+     * 使用配置类的方式配置Bean
+     * @param args
+     */
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
     }
