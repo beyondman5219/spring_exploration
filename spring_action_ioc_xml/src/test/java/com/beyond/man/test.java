@@ -20,8 +20,8 @@ import javax.annotation.Resource;
 import java.lang.reflect.Constructor;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayConfig.class)
-
+//@ContextConfiguration(classes = CDPlayConfig.class)
+@ContextConfiguration(locations = "classpath:SpringBean2.xml")
 public class test {
     /**
      * @Resource 默认按名称查找。如果没有对应名称的bean则按类型查找，
@@ -56,6 +56,12 @@ public class test {
 
     @Test
     public void TestSpringContext() {
+        /**
+         * 1,ClassPathXmlApplicationConext  加载类路径的配置文件
+         * 2，FileSystemXmlApplicationContext 加载物理路径下的配置文件
+         * 3，AnnotationXmlApplicationContext  注解的时候使用的
+         * 4，WebApplicationContext 在WEB应用中加载配置文件
+         */
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringBean2.xml");
         Object sptPapers = applicationContext.getBean("sptPapers");
         System.out.println("sptPapers = " + sptPapers);
