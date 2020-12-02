@@ -5,11 +5,8 @@
 
     <!--多文件拆分后导入-->
     <import resource="SpringBean.xml"></import>
-
-
-
-    <import resource="SpringBean.xml"></import>
-
-    <bean id="sptPapers" class="com.beyond.man.music.impl.SptPapers">
+    <!--bean-->
+    <bean id="bebePaper" class="com.beyond.man.music.impl.BebePaper"></bean>
+    <bean id="person" class="com.beyond.man.domain.Person">
     </bean>
 </beans>

@@ -36,8 +36,8 @@ public class test {
      * 则按默认值sptPapers名称查找，必须有默认值sptPapers
      */
     @Autowired
-    @Qualifier("sptPapers")
-    private CompactDisc sptPapers;
+    @Qualifier("bebePaper")
+    private CompactDisc bebePaper;
 
     @Resource
     private MusicPlay musicPlay;
@@ -45,7 +45,7 @@ public class test {
 
     @Test
     public void cdShuldNotBeNull() {
-        System.out.println("compactDisc = " + sptPapers);
+        System.out.println("compactDisc = " + bebePaper);
     }
 
     @Test
